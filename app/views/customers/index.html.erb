@@ -1,0 +1,16 @@
+<%= link_to "Create new customer", new_customer_path %>
+
+<br/> 
+
+<% if !@customers.blank? %>
+	<% for i in @customers %>
+	 Customer Name: <%= i.firstname %> <%= i.lastname %> <br/>
+	 Contact: <%= i.contact %> <br/>
+	 Address: <%= i.address %> <br/>
+   <%= link_to "Delete customer",i, method: :delete %>
+     <br/>
+	<% end %>
+<% end %>
+
+<br/>
+
